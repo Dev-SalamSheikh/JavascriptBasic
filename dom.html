@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Exploring dom</title>
+</head>
+<body>
+
+   <section>
+       
+    <h1>Hello World</h1>
+    <p class="author">Lorem ipsum dolor sit amet consectetur adipisicing elit. Aliquam, quo.</p>
+    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Sunt cum, iure perferendis repellendus deserunt quis dicta beatae soluta fuga in.</p>
+
+   </section>
+
+   <section id="section-middle">
+       
+    <h1>Hello World Middle</h1>
+    <p class="author">Salam Sheikh.</p>
+    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Sunt cum, iure perferendis repellendus deserunt quis dicta beatae soluta fuga in.</p>
+
+   </section>
+
+   <section>
+       
+    <h1>Hello World</h1>
+    <p class="author">Lorem ipsum dolor sit amet consectetur adipisicing elit. Aliquam, quo.</p>
+    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Sunt cum, iure perferendis repellendus deserunt quis dicta beatae soluta fuga in.</p>
+
+   </section>
+    
+    <script>
+
+      const article = document.getElementById('section-middle');
+      const newParagraph = document.createElement('h3');
+      newParagraph.innerHTML = 'Hello Javascript';
+      article.appendChild(newParagraph);
+      
+      var r = document.querySelector('#section-middle .author');
+      r.remove();
+
+    </script>
+</body>
+</html>

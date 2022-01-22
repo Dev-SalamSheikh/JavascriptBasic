@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    
+
+    <div id="container">
+        <h1>Hello JavaScript World</h1>
+        <ul id="list">
+            <li id="first" class="item">Lorem ipsum dolor sit amet.</li>
+            <li class="item">Quod facilis cum possimus maxime.</li>
+            <li class="item">Nihil ipsa suscipit dolor rerum!</li>
+            <li class="item">Incidunt sed consequuntur delectus neque.</li>
+            <li class="item">Non dicta culpa porro quis?</li>
+        </ul>
+
+        <button id="addNew">Add New Item By Clicking Here</button>
+    </div>
+
+    <script>
+
+        // let items = document.getElementsByClassName('item');
+        // for (let i = 0; i < items.length; i++) {
+        //     const item = items [i];
+        //     item.addEventListener('click', function (clickEvent) {
+        //        clickEvent.target.parentNode.removeChild(clickEvent.target);
+        //     })
+            
+        // }
+
+        document.getElementById('addNew').addEventListener('click', function (clickEvent) {
+            let parentItem = document.getElementById('list');
+            let newItem = document.createElement('li');
+            newItem.innerText = 'Hello This Is My New Text';
+            parentItem.appendChild(newItem);
+        })
+     
+    //  document.getElementById('first').addEventListener('click', function(event){
+    //      console.log('first item clicked');
+        
+    //  })
+     document.getElementById('list').addEventListener('click', function(clickEvent){
+        clickEvent.target.parentNode.removeChild(clickEvent.target); 
+     })
+    //  document.getElementById('container').addEventListener('click', function(event){
+    //      console.log('Container item clicked');
+    //     //  event.stopPropagation();
+    //  })
+
+    </script>
+
+
+</body>
+</html>
